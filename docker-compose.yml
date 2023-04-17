@@ -1,22 +1,21 @@
 version: "3.8"
    
 services:
-    django:
+    web:
+        container_name: core
         build: .
-        container_name: django
-        command: python manage.py runserver 0.0.0.0:8000
+        restart: "always"
+        env_file: .env
         volumes:
-            - .:/usr/src/app/
+            - .:/app
         ports:
             - "8000:8000"
-        environment:
-            - DEBUG=1
-            - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-            - CELERY_BROKER=redis://redis:6379/0
-            - CELERY_BACKEND=redis://redis:6379/0
         depends_on:
-            - pgdb
-            - redis
+            - "postgres"
+            - "redis"
+            - "selenium"
+
+
     selenium:
         image: selenium/standalone-chrome
         container_name: selenium
@@ -25,34 +24,45 @@ services:
             - SCREEN_HEIGHT=768
         ports:
             - "4444:4444"
-    celery:
-        build: .
-        command: celery -A core worker -l INFO
+
+
+    celery_beat:
+        restart: always
+        build:
+            context: .
+        command: celery -A core beat -l INFO
         volumes:
-            - .:/usr/src/app
-        environment:
-            - DEBUG=1
-            - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
-            - CELERY_BROKER=redis://redis:6379/0
-            - CELERY_BACKEND=redis://redis:6379/0
+            - .:/django
+        container_name: celery_beat_con
         depends_on:
-            - django
+            - postgres
             - redis
-    pgdb:
-        image: postgres
-        container_name: pgdb
-        environment:
-            - POSTGRES_DB=postgres
-            - POSTGRES_USER=postgres
-            - POSTGRES_PASSWORD=postgres
+            - web
+        env_file: .env
+
+
+    celery_worker:
+        restart: always
+        build:
+            context: .
+        command: celery -A core worker -l INFO
+        container_name: celery_worker_con
+        depends_on:
+            - postgres
+            - redis
+            - web
+
+
+    postgres:
+        image: postgres:13.0-alpine
         volumes:
-            - pgdata:/var/lib/postgresql/data/
+            - postgres_data:/var/lib/postgresql/data/
+        env_file: .env
+        environment:
+            - LC_ALL=C.UTF-8
     redis:
-        image: "redis:alpine"
-        hostname: redis
-        ports:
-            - "6379:6379"
+        image: redis:6-alpine
         
 volumes:
-    pgdata:
+    postgres_data:
 
