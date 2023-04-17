@@ -1,0 +1,248 @@
+[
+    {
+        "Id": "dae8084e31d752902f57ffe901baea669981637213f2e6fc2b355ce5827fa2a5",
+        "Created": "2023-04-16T23:23:17.569584073Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "redis-server"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 4813,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-04-16T23:23:20.001133596Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:1c1b270ed4205d69c4718b9a31a9dfac8565979ec2f404e4a4102cd053cb7b14",
+        "ResolvConfPath": "/var/lib/docker/containers/dae8084e31d752902f57ffe901baea669981637213f2e6fc2b355ce5827fa2a5/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/dae8084e31d752902f57ffe901baea669981637213f2e6fc2b355ce5827fa2a5/hostname",
+        "HostsPath": "/var/lib/docker/containers/dae8084e31d752902f57ffe901baea669981637213f2e6fc2b355ce5827fa2a5/hosts",
+        "LogPath": "/var/lib/docker/containers/dae8084e31d752902f57ffe901baea669981637213f2e6fc2b355ce5827fa2a5/dae8084e31d752902f57ffe901baea669981637213f2e6fc2b355ce5827fa2a5-json.log",
+        "Name": "/yt-django-docker-compose-celery-redis-postgresql-redis-1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "yt-django-docker-compose-celery-redis-postgresql_default",
+            "PortBindings": {
+                "6379/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "6379"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/f0cab94d1dad2539777eda8ecf47d7c9c008b1fdfa3f0020c77181269aea6639-init/diff:/var/lib/docker/overlay2/43e7f4e832e85815f783c370efbcc45181e8e0e0b19a80634b96c74e05746ef0/diff:/var/lib/docker/overlay2/7a6e3528e6eaa65439d5d342ec25b1de460b0e55e39f3da6008c9a90e38f6387/diff:/var/lib/docker/overlay2/1d9ed908f4a8d36bf2e8b542b9a6cf03154deb6c7dda2386018a486b445f038a/diff:/var/lib/docker/overlay2/482a9d0efc89ea27e8e115f44d06bafdade95ddc24d490f4ffe93515f7fb5205/diff:/var/lib/docker/overlay2/a43e1f3ef8e236f4e6345220a1fefbd118bfa362f4ece86c22c1c4051499d5e7/diff:/var/lib/docker/overlay2/c96103d7d055dbca8d9e345c7a5188603c5d69bfe01db2a0d1cf495829c6ce99/diff",
+                "MergedDir": "/var/lib/docker/overlay2/f0cab94d1dad2539777eda8ecf47d7c9c008b1fdfa3f0020c77181269aea6639/merged",
+                "UpperDir": "/var/lib/docker/overlay2/f0cab94d1dad2539777eda8ecf47d7c9c008b1fdfa3f0020c77181269aea6639/diff",
+                "WorkDir": "/var/lib/docker/overlay2/f0cab94d1dad2539777eda8ecf47d7c9c008b1fdfa3f0020c77181269aea6639/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "f8672bc11abda51695911c67201c16c19d0eeefcfc5462113acdd403cd39f869",
+                "Source": "/var/lib/docker/volumes/f8672bc11abda51695911c67201c16c19d0eeefcfc5462113acdd403cd39f869/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "redis",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "6379/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "REDIS_VERSION=7.0.10",
+                "REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.0.10.tar.gz",
+                "REDIS_DOWNLOAD_SHA=1dee4c6487341cae7bd6432ff7590906522215a061fdef87c7d040a0cb600131"
+            ],
+            "Cmd": [
+                "redis-server"
+            ],
+            "Image": "redis:alpine",
+            "Volumes": {
+                "/data": {}
+            },
+            "WorkingDir": "/data",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "5c7e1180811069376a3280441ce64eb5c91bc2bcc6ef2ea336aacd36006edc05",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:1c1b270ed4205d69c4718b9a31a9dfac8565979ec2f404e4a4102cd053cb7b14",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "yt-django-docker-compose-celery-redis-postgresql",
+                "com.docker.compose.project.config_files": "C:\\Users\\Intiqam\\Desktop\\YT-Django-Docker-Compose-Celery-Redis-PostgreSQL\\docker-compose.yml",
+                "com.docker.compose.project.working_dir": "C:\\Users\\Intiqam\\Desktop\\YT-Django-Docker-Compose-Celery-Redis-PostgreSQL",
+                "com.docker.compose.service": "redis",
+                "com.docker.compose.version": "2.15.1"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "b561c10f88938a531971d287d4bd7099290dd6664934ac10bf8c20f4fe8de397",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "6379/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "6379"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/b561c10f8893",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "yt-django-docker-compose-celery-redis-postgresql_default": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "yt-django-docker-compose-celery-redis-postgresql-redis-1",
+                        "redis",
+                        "dae8084e31d7"
+                    ],
+                    "NetworkID": "dab10ee6805010c00b1f9a32097b71ed2c208358a1079ac81728bdc8429e0e91",
+                    "EndpointID": "333144e50ea23bfd064785453c6845504018fde114fb61fcf6bdd429b8403a20",
+                    "Gateway": "172.20.0.1",
+                    "IPAddress": "172.20.0.3",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:14:00:03",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
