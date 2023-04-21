@@ -8,8 +8,9 @@ class Instagram(DateMixin, SlugMixin):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     username = models.CharField(max_length=200)
     password = models.CharField(max_length=200)
-    following = models.IntegerField(null=True, blank=True)
-    followers = models.IntegerField(null=True, blank=True)
+    following = models.IntegerField(null=True, blank=True, default=0)
+    followers = models.IntegerField(null=True, blank=True, default=0)
+    refresh_time = models.DateField(null=True, blank=True)
 
     class Meta:
         ordering = ("-created_at",)
